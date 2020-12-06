@@ -6,19 +6,30 @@
   <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
 </head>
 <body>
-<script>
-const pressed = [];
-const secretCode = 'supersecret';
+  <p>Type supersecret to get cornified!</p>
 
-window.addEventListener('keyup', (e) => {
-  console.log(e.key);
-  pressed.push(e.key);
-  pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
-  if (pressed.join('').includes(secretCode)) {
-    cornify_add();
-  }
-  console.log(pressed);
-});
-</script>
+  <style>
+    body {
+      background: #bada55;
+      font-family: monospace;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  </style>
+
+  <script>
+  const pressed = [];
+  const secretCode = 'supersecret';
+
+  window.addEventListener('keyup', (e) => {
+    console.log(e.key);
+    pressed.push(e.key);
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+    if (pressed.join('').includes(secretCode)) {
+      cornify_add();
+    }
+    console.log(pressed);
+  });
+  </script>
 </body>
 </html>
